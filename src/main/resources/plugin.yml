@@ -1,0 +1,8 @@
+name: HubsLobby
+version: ${project.version}
+main: ru.hubsmc.hubslobby.HubsLobby
+api-version: 1.13
+prefix: HL
+authors: [Rosenboum]
+description: Lobby HubsServer plugin for HUBS
+website: hubsmc.ru
