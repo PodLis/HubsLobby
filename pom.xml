@@ -6,7 +6,7 @@
 
     <groupId>ru.hubsmc</groupId>
     <artifactId>HubsLobby</artifactId>
-    <version>0.99</version>
+    <version>0.1</version>
     <packaging>jar</packaging>
 
     <name>HubsLobby</name>
@@ -76,9 +76,9 @@
         <dependency>
             <groupId>ru.hubsmc</groupId>
             <artifactId>HubsCore</artifactId>
-            <version>0.9.0</version>
+            <version>0.9.2</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/HubsCore-0.9.0.jar</systemPath>
+            <systemPath>${basedir}/lib/HubsCore-0.9.2.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

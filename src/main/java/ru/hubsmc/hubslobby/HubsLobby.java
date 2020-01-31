@@ -1,38 +1,44 @@
 package ru.hubsmc.hubslobby;
 
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import ru.hubsmc.hubscore.HubsPlugin;
-import ru.hubsmc.hubscore.HubsServer;
+import ru.hubsmc.hubscore.PluginUtils;
 
-public final class HubsLobby extends HubsPlugin implements HubsServer {
+public final class HubsLobby extends HubsPlugin {
 
     @Override
-    public void onStart() {
-
+    public void afterCoreStart() {
+        PluginUtils.logConsole("Hello, i HubsLobby!");
     }
 
     @Override
-    public void onResume() {
-
+    public void beforeCoreStop() {
+        PluginUtils.logConsole("Buy, i HubsLobby!");
     }
 
     @Override
-    public void onPause() {
-
+    public void onPluginEnable() {
+        PluginUtils.logConsole("Hello, i Lobby!");
     }
 
     @Override
-    public void onStop() {
-
+    public void onPluginDisable() {
+        PluginUtils.logConsole("Buy, i Lobby!");
     }
 
     @Override
-    public void onPlayerJoin() {
-
+    public void onPlayerJoin(Player player) {
+        player.getInventory().setItem(8, new ItemStack(Material.DIAMOND));
     }
 
     @Override
-    public void onPlayerQuit() {
+    public void onPlayerQuit(Player player) {
+    }
 
+    @Override
+    public void onSchedule() {
     }
 
 }
