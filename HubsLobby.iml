@@ -28,9 +28,18 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.md-5:bungeecord-chat:1.13-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.25" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: ru.hubsmc:HubsCore:0.9.2">
+      <library name="Maven: ru.hubsmc:HubsCore:0.9.5">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/HubsCore-0.9.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/HubsCore-0.9.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: fr.xephi:authme:5.6.0-SNAPSHOT-b2374">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/AuthMe-5.6.0-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
