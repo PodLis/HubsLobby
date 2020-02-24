@@ -14,9 +14,11 @@ import ru.hubsmc.hubscore.PluginUtils;
 import ru.hubsmc.hubscore.exception.ConfigurationPartMissingException;
 import ru.hubsmc.hubscore.exception.IncorrectConfigurationException;
 import ru.hubsmc.hubscore.exception.WorldNotFoundException;
+import ru.hubsmc.hubscore.module.chesterton.HubsChesterton;
 import ru.hubsmc.hubscore.module.loop.item.InteractItemMeta;
 import ru.hubsmc.hubscore.module.loop.title.TitleAnimation;
 import ru.hubsmc.hubscore.util.ConfigUtils;
+import ru.hubsmc.hubscore.util.PlayerUtils;
 import ru.hubsmc.hubslobby.commands.TipCommand;
 import ru.hubsmc.hubslobby.listener.LobbyJoinLeaveEvent;
 import ru.hubsmc.hubslobby.listener.SuccessLoginEvent;
@@ -86,6 +88,7 @@ public final class HubsLobby extends HubsPlugin {
 
     @Override
     public void onSchedule() {
+        tipManager.makeCycle();
     }
 
     @Override
@@ -131,7 +134,7 @@ public final class HubsLobby extends HubsPlugin {
             InteractItemMeta interactItemMeta = new InteractItemMeta(itemMeta, true, true);
             registerItemInteract(interactItemMeta, () -> {
                 Player player = getItemInteractAction(interactItemMeta).getPlayer();
-                player.performCommand("menu");
+                PlayerUtils.openMenuToPlayer(player, HubsChesterton.getNavigationMenu(player));
             });
             LOBBY_MENU_ITEM.setItemMeta(itemMeta);
         } catch (ConfigurationPartMissingException | IncorrectConfigurationException e) {

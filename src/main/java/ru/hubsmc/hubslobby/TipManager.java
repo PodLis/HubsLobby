@@ -10,6 +10,7 @@ public class TipManager {
 
     private PlayerData lobbyPlayerData;
     private HubsTitle[] tips;
+    private byte cycle;
 
     TipManager(ConfigurationSection section) {
         lobbyPlayerData = new PlayerData("hubs_lobby", "tip");
@@ -51,6 +52,11 @@ public class TipManager {
             return true;
         }
         return false;
+    }
+
+    public void makeCycle() {
+        lobbyPlayerData.saveValue("cycle", "tip", cycle);
+        cycle++;
     }
 
 }
