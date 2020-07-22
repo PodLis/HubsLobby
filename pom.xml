@@ -6,7 +6,7 @@
 
     <groupId>ru.hubsmc</groupId>
     <artifactId>HubsLobby</artifactId>
-    <version>0.4</version>
+    <version>0.5</version>
     <packaging>jar</packaging>
 
     <name>HubsLobby</name>
@@ -70,15 +70,15 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15.1-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>ru.hubsmc</groupId>
             <artifactId>HubsCore</artifactId>
-            <version>0.9.6</version>
+            <version>0.9.7</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/HubsCore-0.9.6.jar</systemPath>
+            <systemPath>${basedir}/lib/HubsCore-0.9.7.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>fr.xephi</groupId>

@@ -43,7 +43,7 @@ public final class HubsLobby extends HubsPlugin {
     public static ItemStack LOBBY_MENU_ITEM;
 
     @Override
-    public void afterCoreStart() {
+    public boolean afterCoreStart() {
         loadFiles();
 
         PluginUtils.setCommandExecutorAndTabCompleter("tip", new TipCommand());
@@ -51,6 +51,7 @@ public final class HubsLobby extends HubsPlugin {
         PluginUtils.registerEventsOfListener(new LobbyJoinLeaveEvent());
 
         PluginUtils.logConsole("HubsLobby successfully loaded!");
+        return true;
     }
 
     @Override
