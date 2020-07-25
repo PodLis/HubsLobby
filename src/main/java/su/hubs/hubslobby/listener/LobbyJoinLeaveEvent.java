@@ -1,4 +1,4 @@
-package ru.hubsmc.hubslobby.listener;
+package su.hubs.hubslobby.listener;
 
 import fr.xephi.authme.api.v3.AuthMeApi;
 import org.bukkit.GameMode;
@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import ru.hubsmc.hubscore.PluginUtils;
 import ru.hubsmc.hubscore.listener.LeaveEvent;
-import ru.hubsmc.hubslobby.HubsLobby;
+import su.hubs.hubslobby.HubsLobby;
 
 import static ru.hubsmc.hubscore.util.PlayerUtils.*;
 

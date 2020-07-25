@@ -1,4 +1,4 @@
-package ru.hubsmc.hubslobby.listener;
+package su.hubs.hubslobby.listener;
 
 import fr.xephi.authme.events.LoginEvent;
 import fr.xephi.authme.events.LogoutEvent;

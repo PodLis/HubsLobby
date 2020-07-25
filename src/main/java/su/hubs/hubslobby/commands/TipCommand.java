@@ -1,10 +1,10 @@
-package ru.hubsmc.hubslobby.commands;
+package su.hubs.hubslobby.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import ru.hubsmc.hubscore.HubsCommand;
-import ru.hubsmc.hubslobby.HubsLobby;
+import su.hubs.hubslobby.HubsLobby;
 
 import java.util.List;
 

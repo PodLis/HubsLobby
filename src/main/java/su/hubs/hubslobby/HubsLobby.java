@@ -1,4 +1,4 @@
-package ru.hubsmc.hubslobby;
+package su.hubs.hubslobby;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -19,9 +19,9 @@ import ru.hubsmc.hubscore.module.loop.item.InteractItemMeta;
 import ru.hubsmc.hubscore.module.loop.title.TitleAnimation;
 import ru.hubsmc.hubscore.util.ConfigUtils;
 import ru.hubsmc.hubscore.util.PlayerUtils;
-import ru.hubsmc.hubslobby.commands.TipCommand;
-import ru.hubsmc.hubslobby.listener.LobbyJoinLeaveEvent;
-import ru.hubsmc.hubslobby.listener.SuccessLoginEvent;
+import su.hubs.hubslobby.commands.TipCommand;
+import su.hubs.hubslobby.listener.LobbyJoinLeaveEvent;
+import su.hubs.hubslobby.listener.SuccessLoginEvent;
 
 import java.io.File;
 import java.util.List;
@@ -97,6 +97,8 @@ public final class HubsLobby extends HubsPlugin {
         switch (s) {
             case "tablo":
                 return configuration.getString("tablo");
+            case "can_give_items":
+                return "false";
             default:
                 return "";
         }
