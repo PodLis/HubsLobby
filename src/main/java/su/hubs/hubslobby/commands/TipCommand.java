@@ -3,12 +3,12 @@ package su.hubs.hubslobby.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import ru.hubsmc.hubscore.HubsCommand;
+import su.hubs.hubscore.HubsCommand;
 import su.hubs.hubslobby.HubsLobby;
 
 import java.util.List;
 
-import static ru.hubsmc.hubscore.util.MessageUtils.sendWrongUsageMessage;
+import static su.hubs.hubscore.util.MessageUtils.sendWrongUsageMessage;
 
 public class TipCommand extends HubsCommand {
 

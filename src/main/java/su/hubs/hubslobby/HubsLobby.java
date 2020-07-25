@@ -9,16 +9,16 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import ru.hubsmc.hubscore.HubsPlugin;
-import ru.hubsmc.hubscore.PluginUtils;
-import ru.hubsmc.hubscore.exception.ConfigurationPartMissingException;
-import ru.hubsmc.hubscore.exception.IncorrectConfigurationException;
-import ru.hubsmc.hubscore.exception.WorldNotFoundException;
-import ru.hubsmc.hubscore.module.chesterton.HubsChesterton;
-import ru.hubsmc.hubscore.module.loop.item.InteractItemMeta;
-import ru.hubsmc.hubscore.module.loop.title.TitleAnimation;
-import ru.hubsmc.hubscore.util.ConfigUtils;
-import ru.hubsmc.hubscore.util.PlayerUtils;
+import su.hubs.hubscore.HubsPlugin;
+import su.hubs.hubscore.PluginUtils;
+import su.hubs.hubscore.exception.ConfigurationPartMissingException;
+import su.hubs.hubscore.exception.IncorrectConfigurationException;
+import su.hubs.hubscore.exception.WorldNotFoundException;
+import su.hubs.hubscore.module.chesterton.HubsChesterton;
+import su.hubs.hubscore.module.loop.item.InteractItemMeta;
+import su.hubs.hubscore.module.loop.title.TitleAnimation;
+import su.hubs.hubscore.util.ConfigUtils;
+import su.hubs.hubscore.util.PlayerUtils;
 import su.hubs.hubslobby.commands.TipCommand;
 import su.hubs.hubslobby.listener.LobbyJoinLeaveEvent;
 import su.hubs.hubslobby.listener.SuccessLoginEvent;
@@ -26,10 +26,10 @@ import su.hubs.hubslobby.listener.SuccessLoginEvent;
 import java.io.File;
 import java.util.List;
 
-import static ru.hubsmc.hubscore.PluginUtils.getItemInteractAction;
-import static ru.hubsmc.hubscore.PluginUtils.registerItemInteract;
-import static ru.hubsmc.hubscore.util.PlayerUtils.teleport;
-import static ru.hubsmc.hubscore.util.StringUtils.replaceColor;
+import static su.hubs.hubscore.PluginUtils.getItemInteractAction;
+import static su.hubs.hubscore.PluginUtils.registerItemInteract;
+import static su.hubs.hubscore.util.PlayerUtils.teleport;
+import static su.hubs.hubscore.util.StringUtils.replaceColor;
 
 public final class HubsLobby extends HubsPlugin {
 

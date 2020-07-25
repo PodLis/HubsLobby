@@ -7,11 +7,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import ru.hubsmc.hubscore.PluginUtils;
-import ru.hubsmc.hubscore.listener.LeaveEvent;
+import su.hubs.hubscore.PluginUtils;
+import su.hubs.hubscore.listener.LeaveEvent;
 import su.hubs.hubslobby.HubsLobby;
 
-import static ru.hubsmc.hubscore.util.PlayerUtils.*;
+import static su.hubs.hubscore.util.PlayerUtils.*;
 
 public class LobbyJoinLeaveEvent implements Listener {
 

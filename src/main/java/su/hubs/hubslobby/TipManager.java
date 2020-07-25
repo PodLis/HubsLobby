@@ -2,9 +2,9 @@ package su.hubs.hubslobby;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
-import ru.hubsmc.hubscore.module.loop.title.HubsTitle;
-import ru.hubsmc.hubscore.module.values.PlayerData;
-import ru.hubsmc.hubscore.util.StringUtils;
+import su.hubs.hubscore.module.loop.title.HubsTitle;
+import su.hubs.hubscore.module.values.PlayerData;
+import su.hubs.hubscore.util.StringUtils;
 
 public class TipManager {
 

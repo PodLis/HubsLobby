@@ -30,7 +30,7 @@
     <orderEntry type="module-library">
       <library name="Maven: ru.hubsmc:HubsCore:0.9.7">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/HubsCore-0.9.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/original-HubsCore-0.9.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

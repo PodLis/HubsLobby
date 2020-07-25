@@ -78,7 +78,7 @@
             <artifactId>HubsCore</artifactId>
             <version>0.9.7</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/HubsCore-0.9.7.jar</systemPath>
+            <systemPath>${basedir}/lib/original-HubsCore-0.9.7.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>fr.xephi</groupId>

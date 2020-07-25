@@ -4,7 +4,7 @@ import fr.xephi.authme.events.LoginEvent;
 import fr.xephi.authme.events.LogoutEvent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import ru.hubsmc.hubscore.listener.JoinEvent;
+import su.hubs.hubscore.listener.JoinEvent;
 
 public class SuccessLoginEvent implements Listener {
 
