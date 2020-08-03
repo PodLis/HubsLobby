@@ -6,7 +6,7 @@
 
     <groupId>su.hubs</groupId>
     <artifactId>HubsLobby</artifactId>
-    <version>0.5</version>
+    <version>0.6</version>
     <packaging>jar</packaging>
 
     <name>HubsLobby</name>
@@ -15,6 +15,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kotlin.version>1.3.72</kotlin.version>
     </properties>
     <url>hubs.su</url>
 
@@ -22,12 +23,30 @@
         <defaultGoal>clean package</defaultGoal>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <sourceDirs>
+                        <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                    </sourceDirs>
+                    <jvmTarget>1.8</jvmTarget>
                 </configuration>
             </plugin>
             <plugin>
@@ -45,6 +64,31 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
             </plugin>
         </plugins>
         <resources>
@@ -64,7 +108,32 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray.kotlin.eap</id>
+            <name>Bintray Kotlin EAP Repository</name>
+            <url>https://dl.bintray.com/kotlin/kotlin-eap</url>
+        </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray.kotlin.eap</id>
+            <name>Bintray Kotlin EAP Repository</name>
+            <url>https://dl.bintray.com/kotlin/kotlin-eap</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
@@ -76,9 +145,9 @@
         <dependency>
             <groupId>ru.hubsmc</groupId>
             <artifactId>HubsCore</artifactId>
-            <version>0.9.7</version>
+            <version>0.9.8</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/original-HubsCore-0.9.7.jar</systemPath>
+            <systemPath>${basedir}/lib/original-HubsCore-0.9.8.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>fr.xephi</groupId>
@@ -86,6 +155,17 @@
             <version>5.6.0-SNAPSHOT-b2374</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/AuthMe-5.6.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
